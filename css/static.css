@@ -2,8 +2,11 @@ body {
   margin: 0;
   padding: 0;
   background-color: #202225;
-  overflow-y: hidden;
   font-family: "Dosis", sans-serif;
+}
+header {
+  width: 100%;
+  height: auto;
 }
 header h1 {
   color: #6270f4;
@@ -11,27 +14,27 @@ header h1 {
   font-weight: 800;
   text-align: center;
   text-transform: uppercase;
-  margin: 2em auto auto auto;
+  margin: 2em auto 2em auto;
 }
 .container {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
-  height: 80vh;
+  align-items:flex-start;
+  height: auto;
+  padding: 1em;
 }
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   width: 30%;
-  height: 550px;
+  min-height: 650px;
   border-radius: 15px;
   transition: 0.5s;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-}
-.card {
   background: #37393f;
+  padding-top: 1em;
 }
 .card .profile {
   margin-top: 10px;
@@ -83,13 +86,15 @@ header h1 {
   color: white;
   margin: 10px;
 }
-.card .content h3 {
-  font-size: 1.2rem;
-  color: #fff;
-}
 .card .content p {
   color: white;
+  font-size: 1rem;
+}
+.card .content li {
+  color: white;
   font-size: 15px;
+  text-align: start;
+  margin-bottom: 0.5rem;
 }
 .card .content a {
   text-decoration: none;
@@ -103,23 +108,74 @@ header h1 {
 .card:hover {
   transform: scale(1.1);
 }
-@media (max-width: 698px) {
+@media (max-width: 840px) {
+  header h1 {
+    color: #6270f4;
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 2em auto 2em auto;
+  }
+  
   .container {
     flex-direction: column;
+    align-items: center;
   }
   .container .card {
-    margin: 5px;
+    margin: 1em;
     padding: 5px;
-    width: 90%;
+    width: 80%;
   }
-  .container .card .content {
-    text-align: center;
-  }
-  .container .card .content h2 {
-    margin-top: -20px;
-    font-size: 24px;
-  }
+
   .container .card .content p {
-    font-size: 14px;
+    font-size: 1rem;
+    word-wrap: break-word;
   }
+  .card .content a {
+    color: #ffd700;
+  }
+  .ET {
+    background: #212121;
+  }
+  .RD {
+    background: #0a3641;
+  }
+  .SN {
+    background: #0a1f54;
+  }
+  .ET .content h2 {
+    color: #ffd602;
+  }
+  .RD .content h2 {
+    color: #ff7f36;
+  }
+  .SN .content h2 {
+    color: #d93b37;
+  }
+}
+
+#logET{
+  display: none;
+}
+#logRD{
+  display: none;
+}
+#logSN{
+  display: none;
+}
+
+button{
+  margin: 2em auto 0.4em auto;
+  border: none;
+  background-color: transparent;
+  color: #ffd700;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-shadow: 1px 1px 2px black;
+}
+button:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
