@@ -1,5 +1,6 @@
 body {
-  margin: 0;
+  margin: auto;
+  width: 100%;
   padding: 0;
   background-color: #202225;
   font-family: "Dosis", sans-serif;
@@ -7,6 +8,7 @@ body {
 header {
   width: 100%;
   height: auto;
+  max-width: 2000px;
 }
 header h1 {
   color: #6270f4;
@@ -22,6 +24,7 @@ header h1 {
   align-items:flex-start;
   height: auto;
   padding: 1em;
+  max-width: 2000px;
 }
 .card {
   display: flex;
@@ -29,7 +32,8 @@ header h1 {
   justify-content: start;
   align-items: center;
   width: 30%;
-  min-height: 650px;
+  max-width: 500px;
+  min-height: 500px;
   border-radius: 15px;
   transition: 0.5s;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
@@ -106,7 +110,7 @@ header h1 {
   color: #ffd700;
 }
 .card:hover {
-  transform: scale(1.1);
+  transform: scale(1.06);
 }
 @media (max-width: 840px) {
   header h1 {
